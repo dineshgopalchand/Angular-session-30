@@ -1,17 +1,21 @@
 import { Component } from "@angular/core";
+import { Course } from "./interfaces/course.interface";
+import { CoursesService } from "./services/courses.service";
 
 @Component({
   selector: 'app-course',
   template: `
   <div>{{showTitle()}}</div>
-  <p>{{1+1+1}}</p>
-  <app-courses></app-courses>
+  <ul>
+  <li *ngFor="let item of coursesList">{{item.name}} ({{item.id}})</li>
+</ul>
   `
 })
 export class CourseComponent {
   private title = 'Course component!!';
-  constructor() {
-    console.log('course component');
+  coursesList: Course[] = [];
+  constructor(private courseService: CoursesService) {
+    this.coursesList = courseService.coursesList;
   }
 
   showTitle() {
