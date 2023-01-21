@@ -54,9 +54,19 @@
 <!-- <button class="btn {{isValid?'btn-primary' : 'btn-danger'}} me-3" (click)="isValid=!isValid">
   {{isValid?'Save':'Discard'}} </button> -->
 
-<button class="btn me-3" [class.btn-primary]="isValid" [class.btn-danger]="!isValid" (click)="isValid=!isValid">
-  {{isValid?'Save':'Discard'}} </button>
+<!-- <button class="btn me-3" [class.btn-primary]="isValid" [class.btn-danger]="!isValid" (click)="isValid=!isValid">
+  {{isValid?'Save':'Discard'}} </button> -->
 <!-- <button class="btn btn-danger"> Discard </button> -->
 
-<button style="border-radius:5px;color:#fff" [style.background-color]="isValid?'blue':'red'" (click)="isValid=!isValid">
-  {{isValid?'Save':'Discard'}} </button>
+<!-- <button style="border-radius:5px;color:#fff" [style.background-color]="isValid?'blue':'red'" (click)="isValid=!isValid">
+  {{isValid?'Save':'Discard'}} </button> -->
+
+
+<button class="btn btn-primary" (click)="onSaveClick()">Save</button>
+
+<form (submit)="onFormSubmit($event)" class="my-4">
+  <div class="form-group">
+    <input type="text" class="form-control" (keyup)="inputChange($event)">
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>
