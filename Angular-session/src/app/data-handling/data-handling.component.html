@@ -1,10 +1,51 @@
 <h3>{{topicName}}</h3>
-<h3 [innerText]="topicName"></h3>
+<!-- <h3 [innerText]="topicName"></h3>
 <h3 [textContent]="topicName"></h3>
-<h3 [innerHTML]="topicName"></h3>
+<h3 [innerHTML]="topicName"></h3> -->
 <hr>
-<div>{{details}}</div>
+<!-- <div>{{details}}</div>
 <div [innerText]="details"></div>
-<div [textContent]="details"></div>
+<div [textContent]="details"></div> -->
 <div [innerHTML]="details" [title]="topicName"></div>
 <img [src]="imageURL" [alt]="'Dummy Image'">
+
+<hr>
+<table class="sample-table" [attr.table-name]="topicName">
+  <tr>
+    <td [attr.colspan]="colSpan">item 1</td>
+    <td>item 4</td>
+    <td>item 5</td>
+    <td>item 6</td>
+  </tr>
+  <tr>
+    <td>item 1</td>
+    <td [attr.rowspan]="rowSpan">item 2</td>
+    <td>item 3</td>
+    <td>item 4</td>
+    <td>item 5</td>
+    <td>item 6</td>
+  </tr>
+  <tr>
+    <td>item 1</td>
+    <td>item 3</td>
+    <td>item 4</td>
+    <td>item 5</td>
+    <td>item 6</td>
+  </tr>
+  <tr>
+    <td>item 1</td>
+    <td>item 2</td>
+    <td>item 3</td>
+    <td>item 4</td>
+    <td>item 5</td>
+    <td>item 6</td>
+  </tr>
+  <tr>
+    <td>item 1</td>
+    <td>item 2</td>
+    <td>item 3</td>
+    <td>item 4</td>
+    <td>item 5</td>
+    <td>item 6</td>
+  </tr>
+</table>

@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class DataHandlingComponent implements OnInit {
   topicName = 'Displaying Data';
   details = '<p >Some details on displaying data</p>';
-  imageURL = 'https://dummyimage.com/600x400/992399/fff';
+  imageURL = 'https://dummyimage.com/100x60/992399/fff';
+
+  colSpan = 3;
+  rowSpan = 2;
   constructor() { }
 
   ngOnInit(): void {
