@@ -6,8 +6,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent {
-
-  constructor() { }
+  title = 'Courses List';
+  coursesList = [
+    {
+      id: 1,
+      name: 'HTML'
+    },
+    {
+      id: 2,
+      name: 'CSS'
+    },
+    {
+      id: 3,
+      name: 'JS'
+    },
+    {
+      id: 4,
+      name: 'Angular'
+    },
+    {
+      id: 5,
+      name: 'NodeJS'
+    },
+    {
+      id: 6,
+      name: 'ExpressJS'
+    }
+  ];
+  constructor() {
+  }
 
 
 }
