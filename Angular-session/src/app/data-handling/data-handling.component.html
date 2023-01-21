@@ -57,3 +57,6 @@
 <button class="btn me-3" [class.btn-primary]="isValid" [class.btn-danger]="!isValid" (click)="isValid=!isValid">
   {{isValid?'Save':'Discard'}} </button>
 <!-- <button class="btn btn-danger"> Discard </button> -->
+
+<button style="border-radius:5px;color:#fff" [style.background-color]="isValid?'blue':'red'" (click)="isValid=!isValid">
+  {{isValid?'Save':'Discard'}} </button>
