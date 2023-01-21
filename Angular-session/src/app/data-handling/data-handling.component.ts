@@ -10,6 +10,8 @@ export class DataHandlingComponent implements OnInit {
   details = '<p >Some details on displaying data</p>';
   imageURL = 'https://dummyimage.com/100x60/992399/fff';
 
+  isValid = true;
+
   colSpan = 3;
   rowSpan = 2;
   constructor() { }

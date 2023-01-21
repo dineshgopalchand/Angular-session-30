@@ -7,6 +7,7 @@ import { CourseComponent } from './course.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseService } from './services/course.service';
 import { DataHandlingComponent } from './data-handling/data-handling.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DataHandlingComponent } from './data-handling/data-handling.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [
     CourseService

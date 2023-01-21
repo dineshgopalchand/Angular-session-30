@@ -10,7 +10,7 @@
 <img [src]="imageURL" [alt]="'Dummy Image'">
 
 <hr>
-<table class="sample-table" [attr.table-name]="topicName">
+<!-- <table class="sample-table" [attr.table-name]="topicName">
   <tr>
     <td [attr.colspan]="colSpan">item 1</td>
     <td>item 4</td>
@@ -48,4 +48,12 @@
     <td>item 5</td>
     <td>item 6</td>
   </tr>
-</table>
+</table> -->
+
+
+<!-- <button class="btn {{isValid?'btn-primary' : 'btn-danger'}} me-3" (click)="isValid=!isValid">
+  {{isValid?'Save':'Discard'}} </button> -->
+
+<button class="btn me-3" [class.btn-primary]="isValid" [class.btn-danger]="!isValid" (click)="isValid=!isValid">
+  {{isValid?'Save':'Discard'}} </button>
+<!-- <button class="btn btn-danger"> Discard </button> -->
