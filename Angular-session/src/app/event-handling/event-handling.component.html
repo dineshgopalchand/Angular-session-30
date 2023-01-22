@@ -1,0 +1,25 @@
+<!-- <button class="btn btn-primary" (click)="onSaveClick()">Save</button> -->
+
+<div class="d-flex justify-content-center">
+  <form (submit)="onFormSubmit($event)" class="my-4">
+
+    <div class="form-group">
+      <input type="text" class="form-control" (keyup)="inputChange($event)" name="username" placeholder="Username">
+    </div>
+    <div class="form-group mt-2 text-center">
+      <button class="btn btn-primary form-control">Submit</button>
+
+    </div>
+  </form>
+</div>
+
+
+<div class="d-flex justify-content-center">
+  <div class="form-group">
+    <!-- <input type="text" class="form-control" name="name" placeholder="Full Name" (keyup)="changeInput($event)"> -->
+
+    <input type="text" class="form-control" #fullNameInput name="name" placeholder="Full Name ( Event filter)"
+      (keyup.enter)="changeInputWithFilter(fullNameInput)">
+    <div>{{fullName}}</div>
+  </div>
+</div>

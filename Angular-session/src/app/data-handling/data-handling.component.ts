@@ -23,13 +23,5 @@ export class DataHandlingComponent implements OnInit {
   onSaveClick() {
     console.log('Save button get clicked');
   }
-  onFormSubmit(event: SubmitEvent) {
-    console.log(event.preventDefault());
-    console.log('Form submitted')
-  }
-
-  inputChange(event: KeyboardEvent) {
-    console.log((event.target as HTMLInputElement).value);
-  }
 }
 
