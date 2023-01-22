@@ -39,5 +39,5 @@
 
   <input type="text" class="form-control" name="name" [(ngModel)]="userFullName" placeholder="Full Name"
     (keyup.enter)="showUserFullName()">
-  <div>{{userFullName}}</div>
+  <div *ngIf="showResult">{{userFullName}}</div>
 </div>

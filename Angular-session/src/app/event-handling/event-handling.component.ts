@@ -10,6 +10,7 @@ export class EventHandlingComponent implements OnInit {
   fullName = '';
 
   userFullName = 'Dinesh';
+  showResult = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -51,7 +52,12 @@ export class EventHandlingComponent implements OnInit {
 
 
   showUserFullName() {
+    this.showResult = true;
     console.log(this.userFullName);
+    setTimeout(() => {
+      this.showResult = false;
+    }, 2000);
+
   }
 
 }
