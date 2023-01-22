@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class EventHandlingComponent implements OnInit {
 
   fullName = '';
+
+  userFullName = 'Dinesh';
   constructor() { }
 
   ngOnInit(): void {
@@ -45,6 +47,11 @@ export class EventHandlingComponent implements OnInit {
   }
   eventBubblingParentDivClick() {
     console.log('eventBubblingParentDivClick');
+  }
+
+
+  updateUserFullName(input: HTMLInputElement) {
+    this.userFullName = input.value;
   }
 
 }

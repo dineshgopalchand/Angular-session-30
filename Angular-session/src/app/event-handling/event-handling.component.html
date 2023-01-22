@@ -32,3 +32,12 @@
   </div>
 
 </div>
+
+<hr>
+<h3>One way and two way binding</h3>
+<div class="form-group">
+
+  <input type="text" class="form-control" name="name" [value]="userFullName" #userFullNameInput placeholder="Full Name"
+    (keyup)="updateUserFullName(userFullNameInput)">
+  <div>{{userFullName}}</div>
+</div>
