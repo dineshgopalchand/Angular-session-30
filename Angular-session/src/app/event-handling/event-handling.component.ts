@@ -50,8 +50,8 @@ export class EventHandlingComponent implements OnInit {
   }
 
 
-  updateUserFullName(input: HTMLInputElement) {
-    this.userFullName = input.value;
+  showUserFullName() {
+    console.log(this.userFullName);
   }
 
 }

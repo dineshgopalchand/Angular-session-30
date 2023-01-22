@@ -9,6 +9,7 @@ import { CourseService } from './services/course.service';
 import { DataHandlingComponent } from './data-handling/data-handling.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EventHandlingComponent } from './event-handling/event-handling.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EventHandlingComponent } from './event-handling/event-handling.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [
     CourseService

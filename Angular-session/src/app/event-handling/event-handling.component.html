@@ -37,7 +37,7 @@
 <h3>One way and two way binding</h3>
 <div class="form-group">
 
-  <input type="text" class="form-control" name="name" [value]="userFullName" #userFullNameInput placeholder="Full Name"
-    (keyup)="updateUserFullName(userFullNameInput)">
+  <input type="text" class="form-control" name="name" [(ngModel)]="userFullName" placeholder="Full Name"
+    (keyup.enter)="showUserFullName()">
   <div>{{userFullName}}</div>
 </div>
