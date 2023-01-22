@@ -10,6 +10,7 @@ import { DataHandlingComponent } from './data-handling/data-handling.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EventHandlingComponent } from './event-handling/event-handling.component';
 import { FormsModule } from '@angular/forms';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     CourseComponent,
     CoursesComponent,
     DataHandlingComponent,
-    EventHandlingComponent
+    EventHandlingComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
