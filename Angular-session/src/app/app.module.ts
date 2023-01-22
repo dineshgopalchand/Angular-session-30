@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EventHandlingComponent } from './event-handling/event-handling.component';
 import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
+import { SummaryPipe } from './common/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PipesComponent } from './pipes/pipes.component';
     CoursesComponent,
     DataHandlingComponent,
     EventHandlingComponent,
-    PipesComponent
+    PipesComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

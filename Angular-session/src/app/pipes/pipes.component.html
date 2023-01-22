@@ -20,11 +20,15 @@
 
 <!-- {{JSON.stringify(details)}} -->
 
+<div>{{details.description | summary}}</div>
+<div>{{details.description | summary:20}}</div>
+<div>{{details.description | summary:200}}</div>
+<div>{{details.description | summary:2000}}</div>
 <div>{{details | json}}</div>
-<div>{{details | keyvalue | json}}</div>
-<table class="table table-bordered">
+<!-- <div>{{details | keyvalue | json}}</div> -->
+<!-- <table class="table table-bordered">
   <tr *ngFor="let item of details | keyvalue">
     <th>{{item.key}}</th>
     <td>{{item.value}}</td>
   </tr>
-</table>
+</table> -->
