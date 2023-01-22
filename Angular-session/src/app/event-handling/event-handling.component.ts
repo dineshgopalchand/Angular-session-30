@@ -35,4 +35,16 @@ export class EventHandlingComponent implements OnInit {
     this.fullName = ele.value;
   }
 
+  eventBubblingButtonClick(event: Event) {
+    event.stopPropagation();
+    console.log('eventBubblingButtonClick');
+  }
+  eventBubblingChildDivClick(event: Event) {
+    event.stopPropagation();
+    console.log('eventBubblingChildDivClick');
+  }
+  eventBubblingParentDivClick() {
+    console.log('eventBubblingParentDivClick');
+  }
+
 }

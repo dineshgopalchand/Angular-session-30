@@ -23,3 +23,12 @@
     <div>{{fullName}}</div>
   </div>
 </div>
+
+<div class="parant" (click)="eventBubblingParentDivClick()">
+  <div class="child" (click)="eventBubblingChildDivClick($event)">
+    <button class="btn btn-primary" (click)="eventBubblingButtonClick($event)">
+      Event Bubbling Demo
+    </button>
+  </div>
+
+</div>
