@@ -11,7 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EventHandlingComponent } from './event-handling/event-handling.component';
 import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
-import { SummaryPipe } from './common/summary.pipe';
+import { SummaryPipe } from './common/pipes/summary.pipe';
+import { TextFormatingPipe } from './common/pipes/text-formating.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SummaryPipe } from './common/summary.pipe';
     DataHandlingComponent,
     EventHandlingComponent,
     PipesComponent,
-    SummaryPipe
+    SummaryPipe,
+    TextFormatingPipe
   ],
   imports: [
     BrowserModule,

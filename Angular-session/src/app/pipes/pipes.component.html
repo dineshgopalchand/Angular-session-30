@@ -24,6 +24,7 @@
 <div>{{details.description | summary:20}}</div>
 <div>{{details.description | summary:200}}</div>
 <div>{{details.description | summary:2000}}</div>
+
 <div>{{details | json}}</div>
 <!-- <div>{{details | keyvalue | json}}</div> -->
 <!-- <table class="table table-bordered">
@@ -32,3 +33,5 @@
     <td>{{item.value}}</td>
   </tr>
 </table> -->
+
+<div [innerHTML]="details.description | summary |  textFormating"></div>

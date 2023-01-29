@@ -5,9 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SummaryPipe implements PipeTransform {
 
-  transform(value: string, limit = 50): string | null {
+  transform(value: string, limit = 50): string {
     if (!value) {
-      return null;
+      return '';
     }
     return value.substr(0, limit) + (value.length > limit ? '...' : '');
   }
