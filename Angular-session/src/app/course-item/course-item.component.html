@@ -1,0 +1,13 @@
+<div class="card w-100">
+  <div class="card-body">
+    <!-- <h5 class="card-title">{{course.name}}</h5>
+    <p class="card-text">{{course.details}}</p> -->
+    <h5 class="card-title">{{detail.name}}</h5>
+    <p class="card-text">{{detail.details}}</p>
+    <div class="d-flex justify-content-between">
+      <a href="#" class="btn btn-primary">See More</a>
+      <app-like [isLike]="detail.isLike" [likeCount]="detail.likeCount" (updateLike)="updateLikeFn($event)"></app-like>
+    </div>
+
+  </div>
+</div>

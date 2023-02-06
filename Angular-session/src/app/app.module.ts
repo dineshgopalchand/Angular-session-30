@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { SummaryPipe } from './common/pipes/summary.pipe';
 import { TextFormatingPipe } from './common/pipes/text-formating.pipe';
+import { CourseListComponent } from './course-list/course-list.component';
+import { CourseItemComponent } from './course-item/course-item.component';
+import { LikeComponent } from './common/component/like/like.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { TextFormatingPipe } from './common/pipes/text-formating.pipe';
     EventHandlingComponent,
     PipesComponent,
     SummaryPipe,
-    TextFormatingPipe
+    TextFormatingPipe,
+    CourseListComponent,
+    CourseItemComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

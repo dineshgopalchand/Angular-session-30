@@ -1,0 +1,7 @@
+<h2>Course List</h2>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3  mb-2" *ngFor="let course of courseList">
+    <app-course-item [detail]="course" (updateCourse)="updateCourse($event)"></app-course-item>
+  </div>
+
+</div>

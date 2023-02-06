@@ -1,0 +1,7 @@
+<div (click)="updateStatus()" class="text-center">
+  <i class="fa-regular fa-heart cursor-pointer" *ngIf="!isLike"></i>
+  <i class="fa-solid fa-heart cursor-pointer like" *ngIf="isLike"></i>
+  <span> {{likeCount}} </span>
+  <br>
+  <span>{{isLike?'Liked':'Like'}}</span>
+</div>

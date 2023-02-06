@@ -8,34 +8,53 @@ export class CoursesService {
   coursesList: Course[] = [
     {
       id: 1,
-      name: 'HTML'
+      name: 'HTML',
+      details: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, neque.',
+      isLike: true,
+      likeCount: 23
     },
     {
       id: 2,
-      name: 'CSS'
+      name: 'CSS',
+      details: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, neque.',
+      isLike: false,
+      likeCount: 23
     },
     {
       id: 3,
-      name: 'JS'
+      name: 'JS',
+      details: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, neque.',
+      isLike: true,
+      likeCount: 45
     },
     {
       id: 4,
-      name: 'Angular'
+      name: 'Angular',
+      details: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, neque.',
+      isLike: true,
+      likeCount: 73
     },
     {
       id: 5,
-      name: 'NodeJS'
+      name: 'NodeJS',
+      details: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, neque.',
+      isLike: false,
+      likeCount: 53
     },
     {
       id: 6,
-      name: 'Express JS'
+      name: 'Express JS',
+      details: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, neque.',
+      isLike: true,
+      likeCount: 46
     }
   ];
 
   addNewCourse() {
     this.coursesList.push({
       id: 7,
-      name: 'MongoDB'
+      name: 'MongoDB',
+      details: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, neque.',
     })
   }
 }
