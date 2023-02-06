@@ -6,7 +6,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class TextFormatingPipe implements PipeTransform {
 
-  colorPattern = ['#333745', '#e63462'];
+  colorPattern = ['#333745', '#e63462', '#0000ff', '#00ff00'];
   constructor(private sanitized: DomSanitizer) {
 
   }
@@ -14,7 +14,7 @@ export class TextFormatingPipe implements PipeTransform {
     console.log('pipe args value', args);
     // const colorPattern = args ? args.color ? args.color : this.colorPattern : this.colorPattern;
     let colorPattern = this.colorPattern;
-    if (args && args.color) {
+    if (args?.color) {
       colorPattern = args.color;
     }
     console.log(value);
