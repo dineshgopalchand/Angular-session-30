@@ -16,6 +16,9 @@ import { TextFormatingPipe } from './common/pipes/text-formating.pipe';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseItemComponent } from './course-item/course-item.component';
 import { LikeComponent } from './common/component/like/like.component';
+import { BootstrapPanelComponent } from './common/layout/bootstrap-panel/bootstrap-panel.component';
+import { HeaderComponent } from './common/component/header/header.component';
+import { FooterComponent } from './common/component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { LikeComponent } from './common/component/like/like.component';
     TextFormatingPipe,
     CourseListComponent,
     CourseItemComponent,
-    LikeComponent
+    LikeComponent,
+    BootstrapPanelComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
