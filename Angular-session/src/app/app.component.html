@@ -9,15 +9,16 @@
 <!-- <app-course></app-course>
 <app-courses></app-courses> -->
 <app-bootstrap-panel>
-  <div class="header">
-    <app-header></app-header>
-  </div>
-  <div class="main">
+  <ng-container class="header">
+    <app-header ></app-header>
+  </ng-container>
+  <ng-container class="main">
     <app-courses></app-courses>
-  </div>
-  <div class="footer">
+  </ng-container>
+  <ng-container class="footer">
     <app-footer></app-footer>
-  </div>
+  </ng-container>
+
 </app-bootstrap-panel>
 
 <router-outlet></router-outlet>
