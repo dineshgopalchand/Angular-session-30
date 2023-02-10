@@ -1,3 +1,6 @@
-ul {
-  text-decoration: underline;
+.list-item{
+  display: flex;
+  :nth-child(1){
+    flex-grow: 1;
+  }
 }
