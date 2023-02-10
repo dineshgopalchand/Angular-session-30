@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,9 +17,11 @@ export class PipesComponent implements OnInit {
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi earum consectetur soluta. Sapiente, cumque, at quo eius commodi expedita dicta odio recusandae temporibus incidunt magnam minus porro blanditiis ut quibusdam.'
   }
   currencyType = 'EUR';
-  constructor() { }
+  constructor(private datePipe: DatePipe) { }
 
   ngOnInit(): void {
+    const formattedDate=this.datePipe.transform(new Date(),'short');
+    console.log(formattedDate);
   }
 
   // get JSON() {

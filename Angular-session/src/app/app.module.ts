@@ -19,6 +19,7 @@ import { LikeComponent } from './common/component/like/like.component';
 import { BootstrapPanelComponent } from './common/layout/bootstrap-panel/bootstrap-panel.component';
 import { HeaderComponent } from './common/component/header/header.component';
 import { FooterComponent } from './common/component/footer/footer.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FooterComponent } from './common/component/footer/footer.component';
     FormsModule
   ],
   providers: [
-    CourseService
+    CourseService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
