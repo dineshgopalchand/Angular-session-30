@@ -1,16 +1,40 @@
 <div class="mt-2 ms-2">
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <button class="nav-link " [class.active]="activeTab=='course'" (click)="activeTab='course'">Courses</button>
+      <button
+        class="nav-link"
+        [class.active]="activeTab == 'course'"
+        (click)="activeTab = 'course'"
+      >
+        Courses
+      </button>
     </li>
     <li class="nav-item">
-      <button class="nav-link" [class.active]="activeTab=='todo'" (click)="activeTab='todo'">Todo</button>
+      <button
+        class="nav-link"
+        [class.active]="activeTab == 'todo'"
+        (click)="activeTab = 'todo'"
+      >
+        Todo
+      </button>
     </li>
   </ul>
-<div class="detail-box">
-  <!-- <app-courses *ngIf="activeTab=='course'"></app-courses>
+  <div class="detail-box">
+    <!-- <app-courses *ngIf="activeTab=='course'"></app-courses>
   <app-todo-list *ngIf="activeTab=='todo'"></app-todo-list> -->
-  <app-courses [hidden]="activeTab!='course'"></app-courses>
-  <app-todo-list [hidden]="activeTab!='todo'"></app-todo-list>
-</div>
+
+    <!-- <app-courses [hidden]="activeTab!='course'"></app-courses>
+  <app-todo-list [hidden]="activeTab!='todo'"></app-todo-list> -->
+    <ng-container [ngSwitch]="activeTab">
+      <ng-container *ngSwitchCase="'course'">
+        <app-courses></app-courses>
+      </ng-container>
+      <ng-container *ngSwitchCase="'todo'">
+        <app-todo-list></app-todo-list>
+      </ng-container>
+      <ng-container *ngSwitchDefault>
+        <div>Not a vaild option</div>
+      </ng-container>
+    </ng-container>
+  </div>
 </div>
