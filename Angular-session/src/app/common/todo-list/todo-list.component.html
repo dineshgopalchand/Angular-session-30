@@ -13,13 +13,18 @@
 <ul class="list-group list-group-flush">
   <li class="list-group-item list-item" *ngFor="let item of todoList">
     <div>{{ item.title }}</div>
-    <button class="btn "
-    [ngClass]="{
-      'btn-primary': item.active,
-      'btn-success': !item.active
-    }"
-    
-    (click)="updateStatus(item)" >
+    <button
+      class="btn"
+      [ngClass]="{
+        'btn-primary': item.active,
+        'btn-success': !item.active
+      }"
+      [ngStyle]="{
+        'font-weight': item.active ? '' : 'bold',
+        'text-decoration': item.active ? 'line-through' : 'underline'
+      }"
+      (click)="updateStatus(item)"
+    >
       {{ item.active ? "Inactive" : "Active" }}
     </button>
     <!-- <button
