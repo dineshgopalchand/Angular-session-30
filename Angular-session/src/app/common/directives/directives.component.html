@@ -8,7 +8,9 @@
     </li>
   </ul>
 <div class="detail-box">
-  <app-courses *ngIf="activeTab=='course'"></app-courses>
-  <app-todo-list *ngIf="activeTab=='todo'"></app-todo-list>
+  <!-- <app-courses *ngIf="activeTab=='course'"></app-courses>
+  <app-todo-list *ngIf="activeTab=='todo'"></app-todo-list> -->
+  <app-courses [hidden]="activeTab!='course'"></app-courses>
+  <app-todo-list [hidden]="activeTab!='todo'"></app-todo-list>
 </div>
 </div>
