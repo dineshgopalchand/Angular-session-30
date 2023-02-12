@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from './todo.enum';
 
 @Component({
   selector: 'app-todo-list',
@@ -9,7 +10,14 @@ export class TodoListComponent implements OnInit {
   todoList: TodoItem[] = [];
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const todoItemFromStorage = localStorage.getItem(Todo.storageKey);
+    if (todoItemFromStorage) {
+      this.todoList = JSON.parse(todoItemFromStorage);
+    } else {
+      this.todoList = [];
+    }
+  }
   addTodo(todoinput: HTMLInputElement) {
     const newTodo = todoinput.value.trim();
     if (newTodo.length > 3) {
@@ -20,9 +28,11 @@ export class TodoListComponent implements OnInit {
       });
       todoinput.value = '';
     }
+    this.postTodoList();
   }
   deleteCourse(item: TodoItem) {
     this.todoList = this.todoList.filter((todo) => todo.id != item.id);
+    this.postTodoList();
   }
   updateStatus(item: TodoItem) {
     this.todoList = this.todoList.map((todo) => {
@@ -31,6 +41,10 @@ export class TodoListComponent implements OnInit {
         active: todo.id == item.id ? !todo.active : todo.active,
       };
     });
+    this.postTodoList();
+  }
+  postTodoList() {
+    localStorage.setItem(Todo.storageKey, JSON.stringify(this.todoList));
   }
 }
 // export type todoItem={
