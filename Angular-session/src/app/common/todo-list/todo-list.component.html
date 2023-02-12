@@ -1,1 +1,49 @@
-<p>todo-list works!</p>
+<h3>Todo List</h3>
+
+<div class="form-group todo-add">
+  <input
+    type="text"
+    class="form-control"
+    #todoAdd
+    (keydown.enter)="addTodo(todoAdd)"
+  />
+  <button class="btn btn-primary" (click)="addTodo(todoAdd)">Add</button>
+</div>
+
+<ul class="list-group list-group-flush">
+  <li class="list-group-item list-item" *ngFor="let item of todoList">
+    <div>{{ item.title }}</div>
+    <!-- <button class="btn btn-primary" (click)="updateStatus(item)" >
+      {{ item.active ? "Inactive" : "Active" }}
+    </button> -->
+    <!-- <button
+      class="btn btn-primary"
+      (click)="updateStatus(item)"
+      *ngIf="item.active"
+    >
+      Inactive
+    </button>
+    <button
+      class="btn btn-primary"
+      (click)="updateStatus(item)"
+      *ngIf="!item.active"
+    >
+      Active
+    </button> -->
+    <ng-container
+      *ngIf="item.active; then inactiveButton; else activeButton"
+    ></ng-container>
+    <ng-template #inactiveButton>
+      <button class="btn btn-primary" (click)="updateStatus(item)">
+        Inactive
+      </button>
+    </ng-template>
+    <ng-template #activeButton>
+      <button class="btn btn-primary" (click)="updateStatus(item)">
+        Active
+      </button>
+    </ng-template>
+
+    <button class="btn btn-danger" (click)="deleteCourse(item)">Delete</button>
+  </li>
+</ul>

@@ -1,20 +1,6 @@
 <h3>{{ title }}</h3>
+<button (click)="addNewCourse()">Add New Course</button>
 <ul class="list-group list-group-flush">
-  <!-- <li class="list-group-item " *ngFor="let item of coursesList; index as i" [class.list-group-item-info]="i==0"> -->
-  <!-- <li
-    class="list-group-item"
-    *ngFor="let item of coursesList; index as i; first as f; last as l"
-    [class.list-group-item-info]="f"
-    [class.list-group-item-success]="l"
-  > -->
-  <!-- <li
-    class="list-group-item list-item"
-    *ngFor="let item of coursesList; index as i; even as e;odd as o"
-    [class.list-group-item-info]="e"
-    [class.list-group-item-light]="o"
-  >
-    <div>{{ i + 1 }}. {{ item.name }} </div> <button class="btn btn-danger" (click)="deleteCourse(item)">Delete</button>
-  </li> -->
   <li
     class="list-group-item list-item"
     *ngFor="let item of coursesList; trackBy:trackByFn"
@@ -22,11 +8,6 @@
     <div> {{ item.name }} </div> <button class="btn btn-danger" (click)="deleteCourse(item)">Delete</button>
   </li>
 
-  <!-- <ng-template ngFor let-item [ngForOf]="coursesList">
-    <li class="list-group-item" >
-      {{ item.name }} ({{ item.id }})
-    </li>
-  </ng-template> -->
 </ul>
 
-<button (click)="addNewCourse()">Add New Course</button>
+

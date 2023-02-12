@@ -1,0 +1,14 @@
+.todo-add{
+  display: flex;
+  gap:10px;
+  input{
+    flex-grow: 1;
+  }
+}
+.list-item{
+  display: flex;
+  :nth-child(1){
+    flex-grow: 1;
+  }
+}
+
