@@ -20,6 +20,8 @@ import { BootstrapPanelComponent } from './common/layout/bootstrap-panel/bootstr
 import { HeaderComponent } from './common/component/header/header.component';
 import { FooterComponent } from './common/component/footer/footer.component';
 import { DatePipe } from '@angular/common';
+import { TodoListComponent } from './common/todo-list/todo-list.component';
+import { DirectivesComponent } from './common/directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { DatePipe } from '@angular/common';
     LikeComponent,
     BootstrapPanelComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TodoListComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

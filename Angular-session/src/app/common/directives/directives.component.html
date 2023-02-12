@@ -1,0 +1,14 @@
+<div class="mt-2 ms-2">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <button class="nav-link " [class.active]="activeTab=='course'" (click)="activeTab='course'">Courses</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" [class.active]="activeTab=='todo'" (click)="activeTab='todo'">Todo</button>
+    </li>
+  </ul>
+<div class="detail-box">
+  <app-courses *ngIf="activeTab=='course'"></app-courses>
+  <app-todo-list *ngIf="activeTab=='todo'"></app-todo-list>
+</div>
+</div>
