@@ -1,12 +1,15 @@
 <h3>Todo List</h3>
 <div class="form-group todo-add">
-  <input
-    type="text"
-    class="form-control"
-    #todoAdd
-    [appInputFormat]="'uppercase'"
-    (keydown.enter)="addTodo(todoAdd)"
-  />
+  <div class="w-100" >
+    <input
+      type="text"
+      #todoAdd
+      class="form-control"
+      appNameValidation
+      [textCase]="'uppercase'"
+      (submitField)="addTodo($event)"
+    />
+  </div>
   <button class="btn btn-primary" (click)="addTodo(todoAdd)">Add</button>
 </div>
 
@@ -31,4 +34,3 @@
     <button class="btn btn-danger" (click)="deleteCourse(item)">Delete</button>
   </li>
 </ul>
-

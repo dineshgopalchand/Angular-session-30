@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InputSubmitField } from '../directives/name-validation.directive';
 import { Todo } from './todo.enum';
 
 @Component({
@@ -46,6 +47,9 @@ export class TodoListComponent implements OnInit {
   postTodoList() {
     localStorage.setItem(Todo.storageKey, JSON.stringify(this.todoList));
   }
+  // submitField(todoVal:InputSubmitField){
+  //   console.log(todoVal);
+  // }
 }
 // export type todoItem={
 //   id:number;

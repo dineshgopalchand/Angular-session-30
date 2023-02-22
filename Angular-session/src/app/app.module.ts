@@ -23,6 +23,7 @@ import { DatePipe } from '@angular/common';
 import { TodoListComponent } from './common/todo-list/todo-list.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { InputFormatDirective } from './common/directives/input-format.directive';
+import { NameValidationDirective } from './common/directives/name-validation.directive';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { InputFormatDirective } from './common/directives/input-format.directive
     NgbModule,
     FormsModule,
     InputFormatDirective,
+    NameValidationDirective
   ],
   providers: [
     CourseService,
