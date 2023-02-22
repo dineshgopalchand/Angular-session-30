@@ -94,7 +94,9 @@ export class NameValidationDirective implements OnInit {
   }
   updateAndRemove() {
     this.renderer.setProperty(this.currentElement, 'value', this.inputVal);
-    this.renderer.removeChild(this.parentNode, this.appendedElement);
+    try{
+      this.renderer.removeChild(this.parentNode, this.appendedElement);
+    }catch{}
   }
   returnUpdatedValue() {
     const returnVal: InputSubmitField = {
