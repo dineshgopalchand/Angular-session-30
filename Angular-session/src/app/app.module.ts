@@ -21,7 +21,8 @@ import { HeaderComponent } from './common/component/header/header.component';
 import { FooterComponent } from './common/component/footer/footer.component';
 import { DatePipe } from '@angular/common';
 import { TodoListComponent } from './common/todo-list/todo-list.component';
-import { DirectivesComponent } from './common/directives/directives.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { InputFormatDirective } from './common/directives/input-format.directive';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { DirectivesComponent } from './common/directives/directives.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    InputFormatDirective,
   ],
   providers: [
     CourseService,

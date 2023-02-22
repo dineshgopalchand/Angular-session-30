@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
-  activeTab='course';
+  activeTab='todo';
   constructor() { }
 
   ngOnInit(): void {
