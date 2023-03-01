@@ -1,3 +1,6 @@
-.form-control.ng-invalid.ng-touched {
-  border: 1.5px solid red;
+.form-control,.f-group{
+  &.ng-invalid.ng-touched {
+    border: 1.5px solid red;
+  }
 }
+

@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {}
   formSubmit(form: NgForm) {
+    console.log(form.value);
     if (form.valid) {
       console.log(form.value);
       // call api to send form details
