@@ -7,13 +7,29 @@
         class="form-control"
         name="uname"
         ngModel
-        #unmae="ngModel"
+        #uname="ngModel"
         required
         minlength="3"
+        maxlength="25"
+        pattern="^[a-zA-Z ]+$"
         placeholder="Full Name"
       />
     </div>
-    <div class="form-group  mb-2">
+    <div
+      class="alert alert-danger p-0 px-1"
+      role="alert"
+      *ngIf="uname.invalid && uname.errors && uname.touched"
+    >
+      <!-- {{ uname.errors | json }} -->
+      <p *ngIf="uname.errors['required']">Full Name is required</p>
+      <p *ngIf="uname.errors['minlength']">
+        Full Name should be at least
+        {{ uname.errors["minlength"]["requiredLength"] }}
+      </p>
+      <p *ngIf="uname.errors['pattern']">Invalid full Name </p>
+    </div>
+
+    <div class="form-group mb-2">
       <input
         type="email"
         class="form-control"
@@ -22,7 +38,7 @@
         placeholder="Email-ID"
       />
     </div>
-    <div class="form-group  mb-2">
+    <div class="form-group mb-2">
       <input
         type="tel"
         class="form-control"
@@ -31,7 +47,7 @@
         placeholder="Phone Number"
       />
     </div>
-    <div class="form-group  mb-2">
+    <div class="form-group mb-2">
       <input
         type="text"
         class="form-control"
@@ -49,7 +65,10 @@
       ></textarea>
     </div>
     <div class="form-group mb-2">
-      <button class="btn btn-primary">Submit</button>
+      <button class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
     </div>
   </form>
+  <div class="alert alert-success" role="alert" *ngIf="formSuccess">
+    Form submission successfull.
+  </div>
 </div>

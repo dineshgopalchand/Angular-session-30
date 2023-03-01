@@ -4,22 +4,24 @@ import { NgForm, NgModel } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
+  formSuccess = false;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  formSubmit(form:NgForm){
-    if(form.valid){
+  ngOnInit(): void {}
+  formSubmit(form: NgForm) {
+    if (form.valid) {
       console.log(form.value);
       // call api to send form details
+
+      setTimeout(() => {  // Assume API response time is 2 seconds
+        this.formSuccess = true;
+        setTimeout(() => { // remove success message after 3 seconds
+          this.formSuccess = false;
+        }, 3000);
+      }, 2000);
     }
-
-
   }
-
-
 }
