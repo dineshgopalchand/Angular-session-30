@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,17 +8,18 @@ import { NgModel } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  unameVal='';
   constructor() { }
 
   ngOnInit(): void {
   }
-  formSubmit(e:SubmitEvent){
-    e.preventDefault();
-    console.log(this.unameVal);
+  formSubmit(form:NgForm){
+    if(form.valid){
+      console.log(form.value);
+      // call api to send form details
+    }
+
+
   }
-  logValue(inputField:NgModel){
-    console.log(inputField.value);
-  }
+
 
 }

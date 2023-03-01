@@ -1,24 +1,23 @@
 <div class="container">
   <h3>Contact Form</h3>
-  <form action="" (submit)="formSubmit($event)">
+  <form #contactForm="ngForm" (submit)="formSubmit(contactForm)">
     <div class="form-group mb-2">
       <input
         type="text"
         class="form-control"
         name="uname"
-        [(ngModel)]="unameVal"
-        #uname="ngModel"
+        ngModel
+        #unmae="ngModel"
         required
         minlength="3"
         placeholder="Full Name"
-        (change)="logValue(uname)"
       />
     </div>
     <div class="form-group  mb-2">
       <input
         type="email"
         class="form-control"
-
+        ngModel
         name="email"
         placeholder="Email-ID"
       />
@@ -27,6 +26,7 @@
       <input
         type="tel"
         class="form-control"
+        ngModel
         name="tel"
         placeholder="Phone Number"
       />
@@ -36,6 +36,7 @@
         type="text"
         class="form-control"
         name="subject"
+        ngModel
         placeholder="Subject"
       />
     </div>
@@ -43,6 +44,7 @@
       <textarea
         class="form-control"
         name="desc"
+        ngModel
         placeholder="Please share more details"
       ></textarea>
     </div>
