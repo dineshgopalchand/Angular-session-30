@@ -24,6 +24,7 @@ import { TodoListComponent } from './common/todo-list/todo-list.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { InputFormatDirective } from './common/directives/input-format.directive';
 import { NameValidationDirective } from './common/directives/name-validation.directive';
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { NameValidationDirective } from './common/directives/name-validation.dir
     HeaderComponent,
     FooterComponent,
     TodoListComponent,
-    DirectivesComponent
+    DirectivesComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,8 @@ import { NameValidationDirective } from './common/directives/name-validation.dir
     NgbModule,
     FormsModule,
     InputFormatDirective,
-    NameValidationDirective
+    NameValidationDirective,
+    ContactModule
   ],
   providers: [
     CourseService,
