@@ -25,7 +25,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { InputFormatDirective } from './common/directives/input-format.directive';
 import { NameValidationDirective } from './common/directives/name-validation.directive';
 import { ContactModule } from './contact/contact.module';
-
+import { SignUpModule } from './sign-up/sign-up.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,12 +52,10 @@ import { ContactModule } from './contact/contact.module';
     FormsModule,
     InputFormatDirective,
     NameValidationDirective,
-    ContactModule
+    ContactModule,
+    SignUpModule,
   ],
-  providers: [
-    CourseService,
-    DatePipe
-  ],
-  bootstrap: [AppComponent]
+  providers: [CourseService, DatePipe],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
