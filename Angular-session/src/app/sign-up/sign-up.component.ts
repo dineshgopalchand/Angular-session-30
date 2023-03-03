@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsernameValidators } from '../common/validators/username-validators';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,7 +11,10 @@ export class SignUpComponent implements OnInit {
   signUpForm: FormGroup;
   constructor() {
     this.signUpForm = new FormGroup({
-      fullname: new FormControl('', Validators.required),
+      fullname: new FormControl('', [
+        Validators.required,
+        UsernameValidators.cannotContainSpace,
+      ]),
       email: new FormControl('dinesh@gmail.com', [
         Validators.required,
         Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/),
