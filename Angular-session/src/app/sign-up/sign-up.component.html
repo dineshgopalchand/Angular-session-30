@@ -9,6 +9,13 @@
         name="fname"
         formControlName="fullname"
       />
+      <div
+        class="alert alert-danger p-0 px-2"
+        *ngIf="fullname.invalid && fullname.touched && fullname.errors"
+      >
+        <!-- {{fullname.errors | json}} -->
+        <p *ngIf="fullname.errors['required']">Full Name is required</p>
+      </div>
     </div>
     <div class="form-group mb-1">
       <input
@@ -18,7 +25,14 @@
         name="email"
         formControlName="email"
       />
+      <div
+        class="alert alert-danger p-0 px-2"
+        *ngIf="email.invalid && email.touched"
+      >
+        There is some issue
+      </div>
     </div>
+
     <div class="form-group mb-1">
       <input
         type="password"
@@ -27,6 +41,12 @@
         name="pass"
         formControlName="password"
       />
+      <div
+        class="alert alert-danger p-0 px-2"
+        *ngIf="password.invalid && password.touched"
+      >
+        There is some issue
+      </div>
     </div>
     <div class="form-group mb-1">
       <input
@@ -36,6 +56,12 @@
         name="repass"
         formControlName="repass"
       />
+      <div
+        class="alert alert-danger p-0 px-2"
+        *ngIf="repass.invalid && repass.touched"
+      >
+        There is some issue
+      </div>
     </div>
     <input type="submit" class="btn btn-primary form-control" />
   </form>
