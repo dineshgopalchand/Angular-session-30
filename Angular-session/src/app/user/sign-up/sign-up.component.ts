@@ -51,5 +51,10 @@ export class SignUpComponent implements OnInit {
     console.log(this.signUpForm.get('fullname'));
     // signup api call will go here
     // this.signUpForm.reset();
+
+    setTimeout(()=>{
+    // create API fail scenario
+      this.signUpForm.setErrors({networkissue:true});
+    },3000);
   }
 }
