@@ -1,0 +1,41 @@
+<div class="form-container">
+  <h3 class="text-center">Sign In</h3>
+  <form [formGroup]="signInForm" (ngSubmit)="signInSubmit()">
+    <div class="form-group mb-1">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email Id"
+        name="email"
+        formControlName="email"
+      />
+      <div
+        class="alert alert-danger p-0 px-2"
+        *ngIf="email.invalid && email.touched"
+      >
+        <p>There is some issue</p>
+      </div>
+    </div>
+
+    <div class="form-group mb-1">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Enter Password"
+        name="pass"
+        formControlName="password"
+      />
+      <div
+        class="alert alert-danger p-0 px-2"
+        *ngIf="password.invalid && password.touched"
+      >
+        There is some issue
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary form-control" [disabled]="signInForm.invalid">
+        Sign-in
+      </button>
+    </div>
+  </form>
+</div>

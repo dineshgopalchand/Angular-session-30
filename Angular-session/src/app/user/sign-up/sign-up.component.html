@@ -1,5 +1,5 @@
 <div class="form-container">
-  <h3>Sign Up Form</h3>
+  <h3 class="text-center">Sign Up</h3>
   <form [formGroup]="signUpForm" (ngSubmit)="signUpSubmit()">
     <div class="form-group mb-1">
       <input
@@ -13,7 +13,7 @@
         class="alert alert-danger p-0 px-2"
         *ngIf="fullname.invalid && fullname.touched && fullname.errors"
       >
-        {{fullname.errors | json}}
+        {{ fullname.errors | json }}
         <p *ngIf="fullname.errors['required']">Full Name is required</p>
       </div>
     </div>
@@ -53,16 +53,29 @@
         type="password"
         class="form-control"
         placeholder="Confirm Password"
-        name="repass"
-        formControlName="repass"
+        name="confirmPassword"
+        formControlName="confirmPassword"
       />
       <div
         class="alert alert-danger p-0 px-2"
-        *ngIf="repass.invalid && repass.touched"
+        *ngIf="confirmPassword.invalid && confirmPassword.touched"
       >
         There is some issue
       </div>
+      <div
+        class="alert alert-danger p-0 px-2"
+        *ngIf="signUpForm.errors && confirmPassword.touched && signUpForm.errors['passwordNotMatch']"
+      >
+        confirm Password not matching
+      </div>
     </div>
-    <input type="submit" class="btn btn-primary form-control" [disabled]="signUpForm.invalid" />
+    <div class="text-center">
+      <button
+        class="btn btn-primary form-control"
+        [disabled]="signUpForm.invalid"
+      >
+        Create Account
+      </button>
+    </div>
   </form>
 </div>
