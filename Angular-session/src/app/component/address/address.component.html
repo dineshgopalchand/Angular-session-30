@@ -1,0 +1,94 @@
+<div class="address-list">
+  <h2>Address List</h2>
+  <div *ngFor="let addr of addressList.controls; index as i">
+    <h3>
+      Address {{ i + 1 }}
+      <button class="btn btn-danger" (click)="deleteAddr(i)">Delete</button>
+    </h3>
+    <ng-container
+      *ngIf="addr.get('edit')?.value; then showForm; else showDetails"
+    ></ng-container>
+    <ng-template #showForm>
+      <form [formGroup]="addr" (ngSubmit)="addAddressSubmit(addr)">
+        <div formGroupName="street">
+          <div class="form-group mb-2">
+            <input
+              type="text"
+              class="form-control"
+              name="street1"
+              placeholder="street 1"
+              formControlName="street1"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <input
+              type="text"
+              class="form-control"
+              name="street2"
+              placeholder="street 2"
+              formControlName="street2"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group mb-2">
+              <input
+                type="text"
+                class="form-control"
+                name="City"
+                placeholder="city"
+                formControlName="city"
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group mb-2">
+              <input
+                type="text"
+                class="form-control"
+                name="state"
+                placeholder="state"
+                formControlName="state"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group mb-2">
+              <input
+                type="text"
+                class="form-control"
+                name="country"
+                placeholder="country"
+                formControlName="country"
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group mb-2">
+              <input
+                type="text"
+                class="form-control"
+                name="pincode"
+                placeholder="pincode"
+                formControlName="pincode"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <button class="btn btn-primary">Add Address</button>
+        </div>
+      </form>
+    </ng-template>
+    <ng-template #showDetails>
+      {{ addr.value | json }}
+      <button class="btn btn-primary" (click)="editAddressSubmit(addr)">Edit</button>
+    </ng-template>
+  </div>
+  <button class="btn btn-success" (click)="addNewAddress()">
+    Add New Address
+  </button>
+</div>
