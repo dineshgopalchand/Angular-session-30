@@ -62,7 +62,7 @@
       >
         There is some issue
       </div>
-      {{confirmPassword.errors | json}}
+      <!-- {{confirmPassword.errors | json}} -->
       <div
         class="alert alert-danger p-0 px-2"
         *ngIf="signUpForm.errors && confirmPassword.touched && signUpForm.errors['passwordNotMatch']"
