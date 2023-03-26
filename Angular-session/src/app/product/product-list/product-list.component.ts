@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ProductListRes } from '../interface/product-list-response.interface';
 import { Product } from '../interface/product.interface';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,12 +8,11 @@ import { Product } from '../interface/product.interface';
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductLIstComponent implements OnInit {
-  productListURL = 'https://dummyjson.com/products';
   productList: Product[] = [];
-  constructor(private http: HttpClient) {}
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
-    this.http.get<ProductListRes>(this.productListURL).subscribe((res) => {
+    this.productsService.fetchProductList().subscribe((res) => {
       this.productList = res.products;
     });
   }
