@@ -1,0 +1,14 @@
+<p>product-list works!</p>
+<div class="row">
+  <div class="col-md-3 col-sm-6 col-xs-12  mb-3" *ngFor="let product of productList">
+    <div class="card h-100" >
+      <img class="card-img-top" [src]="product.thumbnail" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text product-desc">{{product.description}}</p>
+        <a href="#" class="btn btn-primary">View Product</a>
+      </div>
+    </div>
+  </div>
+
+</div>

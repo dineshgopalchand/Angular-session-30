@@ -27,6 +27,7 @@ import { NameValidationDirective } from './common/directives/name-validation.dir
 import { ContactModule } from './contact/contact.module';
 import { UserModule } from './user/user.module';
 import { AddressComponent } from './component/address/address.component';
+import { ProductModule } from './product/product.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { AddressComponent } from './component/address/address.component';
     NameValidationDirective,
     ContactModule,
     UserModule,
-    AddressComponent
+    AddressComponent,
+    ProductModule
   ],
   providers: [CourseService, DatePipe],
   bootstrap: [AppComponent],

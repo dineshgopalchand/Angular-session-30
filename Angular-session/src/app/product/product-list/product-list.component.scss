@@ -1,0 +1,16 @@
+.card-img-top {
+  height: 100px;
+}
+
+.card {
+  display: flex ;
+  .card-body{
+    display: flex ;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+  }
+  .product-desc {
+    flex: 1 1 auto;
+  }
+}
