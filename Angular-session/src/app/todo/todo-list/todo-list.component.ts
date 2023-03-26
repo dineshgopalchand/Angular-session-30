@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InputSubmitField } from '../directives/name-validation.directive';
+import { InputSubmitField } from '../../common/directives/name-validation.directive';
 import { Todo } from './todo.enum';
 
 @Component({

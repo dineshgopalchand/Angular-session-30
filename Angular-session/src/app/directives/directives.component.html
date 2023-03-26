@@ -21,16 +21,16 @@
   </ul>
   <div class="detail-box">
     <!-- <app-courses *ngIf="activeTab=='course'"></app-courses>
-  <app-todo-list *ngIf="activeTab=='todo'"></app-todo-list> -->
+  <app-todo *ngIf="activeTab=='todo'"></app-todo> -->
 
     <!-- <app-courses [hidden]="activeTab!='course'"></app-courses>
-  <app-todo-list [hidden]="activeTab!='todo'"></app-todo-list> -->
+  <app-todo [hidden]="activeTab!='todo'"></app-todo> -->
     <ng-container [ngSwitch]="activeTab">
       <ng-container *ngSwitchCase="'course'">
         <app-courses></app-courses>
       </ng-container>
       <ng-container *ngSwitchCase="'todo'">
-        <app-todo-list></app-todo-list>
+        <app-todo></app-todo>
       </ng-container>
       <ng-container *ngSwitchDefault>
         <div>Not a vaild option</div>
